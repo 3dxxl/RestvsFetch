@@ -1,0 +1,16 @@
+npm test:
+
+zuerst sollte eine kompoente an der alle anderen componenten verknüpft werden, 
+dieser code eingesetzt werden, in einer mit test benannten datei z.b. App.test.js:
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<App />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+
+
+Wenn man dann im Terminal npm test eingibt wrid ein test durchgeführt, fehler werden Rot angezeigt
